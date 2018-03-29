@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 2 (http://www.altova.com) by Toshko (Smart Software Systems) -->
+<xs:schema xmlns="http://nhif.bg/xsd/hosp/cp" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nhif.bg/xsd/hosp/cp" elementFormDefault="qualified">
+	<xs:simpleType name="Str20">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="Protocol_DrugTherapy">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Part_Chemotherapy" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Gen_Markers">
+								<xs:complexType>
+									<xs:sequence maxOccurs="12">
+										<xs:element name="Name" type="Str20"/>
+										<xs:element name="Sign" type="xs:boolean"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="cpFile">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Protocol_DrugTherapy" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

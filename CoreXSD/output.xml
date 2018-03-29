@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<cpFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://nhif.bg/xsd/hosp/cp">
+  <Protocol_DrugTherapy>
+    <Part_Chemotherapy>
+      <Gen_Markers>
+        <Name>One</Name>
+        <Name>Two</Name>
+        <Sign>true</Sign>
+        <Sign>false</Sign>
+      </Gen_Markers>
+    </Part_Chemotherapy>
+  </Protocol_DrugTherapy>
+</cpFile>
